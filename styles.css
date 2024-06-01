@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    z-index: 0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+#new-activity, #logout-button {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#activity-name,
+#activity-description,
+#activity-day,
+#activity-time {
+    display: block;
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#save-activity,
+#cancel {
+    padding: 10px 20px;
+    margin-right: 10px;
+}
+
+#cancel {
+    background-color: #f44336;
+    color: white;
+}
+
+#save-activity {
+    background-color: #4caf50;
+    color: white;
+}
+
+button.complete:before {
+    content: '✔';
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.activity {
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.activity.incomplete {
+    background-color: #007bff; /* Blue for incomplete tasks */
+}
+
+.activity.completed {
+    background-color: #28a745; /* Green for completed tasks */
+}
+
+#auth-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+#register-form, #login-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+input[type="text"], input[type="password"] {
+    display: block;
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#register-button, #login-button {
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #auth-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #register-form, #login-form {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    table, th, td {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    #new-activity, #logout-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 12px;
+    }
+}

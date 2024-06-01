@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Schedule</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Weekly Schedule</h1>
+    <button id="logout-button">Logout</button>
+    <button id="new-activity">New Activity</button>
+    <table id="schedule-table">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </tr>
+        </thead>
+        <tbody id="schedule-body">
+            <!-- Rows will be dynamically generated here -->
+        </tbody>
+    </table>
+
+    <!-- Modal for creating/editing activities -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <input type="text" id="activity-name" placeholder="Activity Name">
+            <textarea id="activity-description" placeholder="Activity Description"></textarea>
+            <label for="activity-day">Day:</label>
+            <select id="activity-day">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+            <label for="activity-time">Time:</label>
+            <select id="activity-time">
+                <!-- Options will be dynamically generated -->
+            </select>
+            <button id="save-activity">Save Activity</button>
+            <button id="cancel">Cancel</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
